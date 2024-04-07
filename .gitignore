@@ -1,0 +1,41 @@
+# IntelliJ IDEA / Android Studio
+.idea
+/.gradle
+/build
+
+# VS Code
+.vscode/
+
+# Flutter/Dart-specific
+**/android/gradle-wrapper.jar
+**/android/.gradle
+**/android/build/
+**/android/gradlew
+**/android/gradlew.bat
+**/android/local.properties
+**/ios/Pods/
+**/ios/.symlinks/
+**/ios/Flutter/ephemeral/.plugin_symlinks/
+**/ios/Flutter/ephemeral/Flutter.framework/
+**/ios/Flutter/ephemeral/flutter_assets/
+**/ios/.generated_plugin_registrant.*
+
+# Miscellaneous
+*.iml
+*.log
+*.log.*
+*.idea/
+*.project
+*.classpath
+*.metadata
+*/.idea/
+*/.idea/workspace.xml
+*/.idea/tasks.xml
+*/.idea/dictionaries
+*/.idea/gradle.xml
+*/.idea/libraries
+*/.idea/caches
+*/.idea/modules.xml
+*/.idea/vcs.xml
+*.swp
+.DS_Store
