@@ -1,4 +1,3 @@
-import 'package:fluent_ui/fluent_ui.dart' hide Colors, FilledButton, Card;
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -107,58 +106,62 @@ class HomeGoState extends State<HomeGo> {
       );
     }
 
-    return Card.filled(
-      elevation: 1,
-        child: Container(
-      padding: EdgeInsets.all(12),
-      // decoration: BoxDecoration(
-      //     color: Colors.white, borderRadius: BorderRadius.circular(12)),
-      child: Column(
-        children: [
-          buildOne(0, '装', ''),
-          SizedBox(
-            height: 12,
-          ),
-          buildOne(1, '卸', ''),
-          SizedBox(
-            height: 12,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Container(
-                child: Row(
+    return Container(
+      margin: EdgeInsets.only(bottom: 12),
+      child: Card.filled(
+          elevation: 1,
+          child: Container(
+            padding: EdgeInsets.all(12),
+            // decoration: BoxDecoration(
+            //     color: Colors.white, borderRadius: BorderRadius.circular(12)),
+            child: Column(
+              children: [
+                buildOne(0, '装', ''),
+                SizedBox(
+                  height: 12,
+                ),
+                buildOne(1, '卸', ''),
+                SizedBox(
+                  height: 12,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Image.asset(
-                      'assets/home_go_location.png',
-                      width: 16,
-                      height: 16,
-                      color: Colors.black54,
+                    Container(
+                      child: Row(
+                        children: [
+                          Image.asset(
+                            'assets/home_go_location.png',
+                            width: 16,
+                            height: 16,
+                            color: Colors.black54,
+                          ),
+                          SizedBox(
+                            width: 4,
+                          ),
+                          Text(
+                            '常用线路',
+                            style:
+                                TextStyle(color: Colors.black54, fontSize: 14),
+                          )
+                        ],
+                      ),
                     ),
                     SizedBox(
-                      width: 4,
-                    ),
-                    Text(
-                      '常用线路',
-                      style: TextStyle(color: Colors.black54, fontSize: 14),
+                      height: 36,
+                      child: FilledButton.icon(
+                          icon: Icon(
+                            CupertinoIcons.paperplane,
+                            size: 18,
+                          ),
+                          onPressed: () {},
+                          label: Text('立即用车')),
                     )
                   ],
-                ),
-              ),
-              SizedBox(
-                height: 36,
-                child: FilledButton.icon(
-                    icon: Icon(
-                      CupertinoIcons.paperplane,
-                      size: 18,
-                    ),
-                    onPressed: () {},
-                    label: Text('立即用车')),
-              )
-            ],
-          )
-        ],
-      ),
-    ));
+                )
+              ],
+            ),
+          )),
+    );
   }
 }

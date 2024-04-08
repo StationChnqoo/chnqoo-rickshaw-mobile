@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:rickshaw/constants/config.dart';
 import 'package:rickshaw/constants/get_stores.dart';
+import 'package:rickshaw/pages/home/widgets/activities.dart';
 import 'package:rickshaw/pages/home/widgets/go.dart';
 import 'package:rickshaw/pages/home/widgets/toolbar.dart';
 import 'package:rickshaw/pages/home/widgets/trucks.dart';
@@ -43,7 +44,8 @@ class HomePageState extends State<HomePage> {
               height: 12,
             ),
             HomeTrucks(),
-            HomeGo()
+            HomeGo(),
+            HomeActivities()
           ],
         )),
       ),
