@@ -1,5 +1,9 @@
+import 'dart:convert';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:rickshaw/constants/mock.dart';
+import 'package:rickshaw/constants/truck.dart';
 
 class HomeGo extends StatefulWidget {
   @override
@@ -154,7 +158,9 @@ class HomeGoState extends State<HomeGo> {
                             CupertinoIcons.paperplane,
                             size: 18,
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            initTrucks();
+                          },
                           label: Text('立即用车')),
                     )
                   ],
@@ -163,5 +169,12 @@ class HomeGoState extends State<HomeGo> {
             ),
           )),
     );
+  }
+
+  initTrucks() {
+    List<Truck> trucks =
+        Mock().initTrucks().map((truckJson) => Truck.fromJson(truckJson)).toList();
+    print('Parsed trucks: ');
+    print(trucks.map((e) => e.name));
   }
 }

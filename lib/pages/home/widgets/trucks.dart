@@ -14,4 +14,10 @@ class HomeTrucksState extends State<HomeTrucks> {
     // TODO: implement build
     return Container();
   }
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+  }
 }

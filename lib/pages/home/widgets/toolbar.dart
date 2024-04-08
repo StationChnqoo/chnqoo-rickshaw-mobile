@@ -30,7 +30,7 @@ class HomeToolBarState extends State<HomeToolBar>
             Container(
               width: double.infinity,
               decoration: BoxDecoration(
-                color: Theme.of(context).primaryColor.withOpacity(0.618),
+                color: Theme.of(context).primaryColor.withOpacity(0.38),
               ),
               height: MediaQuery.of(context).padding.top,
             ),

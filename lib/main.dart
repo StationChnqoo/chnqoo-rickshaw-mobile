@@ -42,7 +42,7 @@ class ChnqooSoulMobileState extends State<ChnqooSoulMobile> {
     return GetMaterialApp(
       title: '',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: CupertinoColors.systemGreen),
+        colorScheme: ColorScheme.fromSeed(seedColor: CupertinoColors.systemBrown),
         useMaterial3: true,
         snackBarTheme: SnackBarThemeData(
           shape: RoundedRectangleBorder(
