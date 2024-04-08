@@ -28,7 +28,7 @@ class HomePageState extends State<HomePage> {
     return Scaffold(
       key: scaffoldKey,
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(kToolbarHeight), // 设置高度为0
+        preferredSize: Size.fromHeight(kToolbarHeight),
         child: HomeToolBar(),
       ),
       body: Container(
