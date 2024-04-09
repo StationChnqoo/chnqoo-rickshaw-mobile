@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:rickshaw/widgets/my_card.dart';
 
 class HomeActivities extends StatefulWidget {
   @override
@@ -26,11 +27,9 @@ class HomeActivitiesState extends State<HomeActivities> {
           ...List.generate(
               4,
               (index) => Container(
-                    margin: EdgeInsets.only(bottom: 10),
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(12)),
-                    padding: EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                  margin: EdgeInsets.only(bottom: 10),
+                 
+                  child: MyCard(
                     child: Row(
                       children: [
                         Expanded(
@@ -62,7 +61,7 @@ class HomeActivitiesState extends State<HomeActivities> {
                         )
                       ],
                     ),
-                  ))
+                  )))
         ],
       ),
     );

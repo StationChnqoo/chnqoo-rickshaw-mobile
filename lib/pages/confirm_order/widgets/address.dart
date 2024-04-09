@@ -4,16 +4,18 @@ import 'package:get/get.dart';
 import 'package:rickshaw/constants/mock.dart';
 import 'package:rickshaw/constants/truck.dart';
 import 'package:rickshaw/routes/routes.dart';
+import 'package:rickshaw/widgets/my_card.dart';
+import 'package:rickshaw/widgets/my_title_card.dart';
 
-class HomeGo extends StatefulWidget {
+class ConfirmOrderAddress extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
-    return HomeGoState();
+    return ConfirmOrderAddressState();
   }
 }
 
-class HomeGoState extends State<HomeGo> {
+class ConfirmOrderAddressState extends State<ConfirmOrderAddress> {
   int index = 0;
   String from = "";
   String to = "";
@@ -55,7 +57,7 @@ class HomeGoState extends State<HomeGo> {
                 height: 48,
                 padding: EdgeInsets.symmetric(horizontal: 12),
                 decoration: BoxDecoration(
-                    color: Colors.white54,
+                    color: Colors.grey.shade100,
                     borderRadius: BorderRadius.circular(12),
                     border: Border.all(
                         width: 1,
@@ -112,73 +114,22 @@ class HomeGoState extends State<HomeGo> {
 
     return Container(
       margin: EdgeInsets.only(bottom: 12),
-      child: Card.filled(
-          elevation: 1,
+      child: MyCard(
+          // title: '地址',
           child: Container(
-            padding: EdgeInsets.all(12),
-            // decoration: BoxDecoration(
-            //     color: Colors.white, borderRadius: BorderRadius.circular(12)),
-            child: Column(
-              children: [
-                buildOne(0, '装', ''),
-                SizedBox(
-                  height: 12,
-                ),
-                buildOne(1, '卸', ''),
-                SizedBox(
-                  height: 12,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Container(
-                      child: Row(
-                        children: [
-                          Image.asset(
-                            'assets/home_go_location.png',
-                            width: 16,
-                            height: 16,
-                            color: Colors.black54,
-                          ),
-                          SizedBox(
-                            width: 4,
-                          ),
-                          Text(
-                            '常用线路',
-                            style:
-                                TextStyle(color: Colors.black54, fontSize: 14),
-                          )
-                        ],
-                      ),
-                    ),
-                    SizedBox(
-                      height: 36,
-                      child: FilledButton.icon(
-                          icon: Icon(
-                            CupertinoIcons.paperplane,
-                            size: 18,
-                          ),
-                          onPressed: () {
-                            print('onGoPress ...');
-                            // x.toast('呵呵', 'HelloWorld.');
-                            Get.toNamed(RoutesClass.CONFIRM_ORDER);
-                          },
-                          label: Text('立即用车')),
-                    )
-                  ],
-                )
-              ],
+        padding: EdgeInsets.symmetric(vertical: 6),
+        // decoration: BoxDecoration(
+        //     color: Colors.white, borderRadius: BorderRadius.circular(12)),
+        child: Column(
+          children: [
+            buildOne(0, '装', ''),
+            SizedBox(
+              height: 12,
             ),
-          )),
+            buildOne(1, '卸', ''),
+          ],
+        ),
+      )),
     );
-  }
-
-  initTrucks() {
-    List<Truck> trucks = Mock()
-        .initTrucks()
-        .map((truckJson) => Truck.fromJson(truckJson))
-        .toList();
-    print('Parsed trucks: ');
-    print(trucks.map((e) => e.name));
   }
 }

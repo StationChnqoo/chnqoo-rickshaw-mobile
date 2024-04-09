@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:rickshaw/constants/config.dart';
 import 'package:rickshaw/constants/get_stores.dart';
+import 'package:rickshaw/pages/confirm_order/widgets/address.dart';
+import 'package:rickshaw/pages/confirm_order/widgets/note.dart';
 import 'package:rickshaw/pages/confirm_order/widgets/truck.dart';
 import 'package:rickshaw/widgets/my_toolbar.dart';
 
@@ -43,9 +45,18 @@ class ConfirmOrderPageState extends State<ConfirmOrderPage> {
             child: Column(
           children: [
             SizedBox(
-              height: 12,
+              height: 32,
             ),
-            ConfirmOrderTruck()
+            ConfirmOrderTruck(),
+            ConfirmOrderAddress(),
+            ConfirmOrderNote(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Container(),
+                FilledButton(onPressed: () {}, child: Text('确认下单'))
+              ],
+            )
           ],
         )),
       ),
