@@ -1,6 +1,8 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:rickshaw/constants/get_stores.dart';
 import 'package:rickshaw/constants/mock.dart';
 import 'package:rickshaw/constants/truck.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
@@ -18,6 +20,7 @@ class HomeTrucksState extends State<HomeTrucks> {
   int currentIndex = 0;
   ItemScrollController listView = ItemScrollController();
   late CarouselController swiper;
+  GetStores stores = Get.find<GetStores>();
 
   @override
   Widget build(BuildContext context) {
@@ -64,6 +67,7 @@ class HomeTrucksState extends State<HomeTrucks> {
                           duration: Duration(seconds: 1),
                           curve: Curves.easeInOut);
                       // swiper.nextPage();
+                      updateTruck(trucks[index]);
                       setState(() {
                         currentIndex = index;
                       });
@@ -89,6 +93,7 @@ class HomeTrucksState extends State<HomeTrucks> {
                             height: 120,
                             onPageChanged: (index, reason) {
                               if (reason == CarouselPageChangedReason.manual) {
+                                updateTruck(trucks[index]);
                                 setState(() {
                                   currentIndex = index;
                                 });
@@ -164,9 +169,14 @@ class HomeTrucksState extends State<HomeTrucks> {
         .initTrucks()
         .map((truckJson) => Truck.fromJson(truckJson))
         .toList();
+    updateTruck(_trucks[0]);
     setState(() {
       trucks = _trucks;
     });
+  }
+
+  updateTruck(t) {
+    stores.truck.value = t;
   }
 
   @override

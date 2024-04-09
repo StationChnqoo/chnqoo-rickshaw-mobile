@@ -79,6 +79,7 @@ class ChnqooSoulMobileState extends State<ChnqooSoulMobile> {
       getPages: RoutesClass.routes,
       defaultTransition: Transition.rightToLeft,
       transitionDuration: Duration(milliseconds: 360),
+      
     );
   }
 

@@ -3,11 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:rickshaw/constants/config.dart';
 import 'package:rickshaw/constants/get_stores.dart';
-import 'package:rickshaw/pages/home/widgets/activities.dart';
-import 'package:rickshaw/pages/home/widgets/footer.dart';
-import 'package:rickshaw/pages/home/widgets/go.dart';
-import 'package:rickshaw/pages/home/widgets/toolbar.dart';
-import 'package:rickshaw/pages/home/widgets/trucks.dart';
+import 'package:rickshaw/pages/confirm_order/widgets/truck.dart';
 import 'package:rickshaw/widgets/my_toolbar.dart';
 
 class ConfirmOrderPage extends StatefulWidget {
@@ -45,7 +41,12 @@ class ConfirmOrderPageState extends State<ConfirmOrderPage> {
         // padding: EdgeInsets.symmetric(horizontal: 12),
         child: SingleChildScrollView(
             child: Column(
-          children: [],
+          children: [
+            SizedBox(
+              height: 12,
+            ),
+            ConfirmOrderTruck()
+          ],
         )),
       ),
     );

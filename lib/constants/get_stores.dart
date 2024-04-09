@@ -2,6 +2,7 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:rickshaw/constants/bing_wall_paper.dart';
 import 'package:rickshaw/constants/mock.dart';
+import 'package:rickshaw/constants/truck.dart';
 import 'package:rickshaw/constants/user.dart';
 
 class GetStores extends GetxController {
@@ -9,6 +10,7 @@ class GetStores extends GetxController {
   /** 结构简单，直接修改value */
   var homePage = 0.obs;
   var myPage = 0.obs;
+  var truck = Truck.fromJson(Mock().initTrucks()[0] as Map<String, dynamic>).obs;
 
   /** 变量缓存 */
   /** 结构复杂，必须通过暴露出来的Set/Get接口修改 */
