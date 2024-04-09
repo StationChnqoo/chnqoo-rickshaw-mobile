@@ -36,13 +36,16 @@ class ChnqooSoulMobile extends StatefulWidget {
 
 class ChnqooSoulMobileState extends State<ChnqooSoulMobile> {
   // This widget is the root of your application.
+  final GlobalKey<NavigatorState> appContext = GlobalKey<NavigatorState>();
+
   @override
   Widget build(BuildContext context) {
     ScreenUtil.init(context, designSize: const Size(360, 640));
     return GetMaterialApp(
       title: '',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: CupertinoColors.systemBrown),
+        colorScheme:
+            ColorScheme.fromSeed(seedColor: CupertinoColors.systemBrown),
         useMaterial3: true,
         snackBarTheme: SnackBarThemeData(
           shape: RoundedRectangleBorder(

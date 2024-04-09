@@ -76,40 +76,84 @@ class HomeTrucksState extends State<HomeTrucks> {
           ),
           trucks.length > 0
               ? Container(
-                  child: CarouselSlider.builder(
-                    carouselController: swiper,
-                    itemCount: trucks.length,
-                    options: CarouselOptions(
-                      autoPlay: false,
-                      viewportFraction: 0.8,
-                      height: 120,
-                      onPageChanged: (index, reason) {
-                        if (reason == CarouselPageChangedReason.manual) {
-                          setState(() {
-                            currentIndex = index;
-                          });
-                        }
-                        listView.scrollTo(
-                            index: index,
-                            alignment: 0.5,
-                            duration: Duration(seconds: 1),
-                            curve: Curves.linearToEaseOut);
-                      },
-                    ),
-                    itemBuilder: (BuildContext context, int itemIndex,
-                        int pageViewIndex) {
-                      Truck truck = trucks[itemIndex];
-                      return Container(
-                        child: CachedNetworkImage(
-                          imageUrl: truck.src,
-                          height: double.infinity,
-                          fit: BoxFit.fitWidth,
+                  margin: EdgeInsets.only(bottom: 12),
+                  child: Column(
+                    children: [
+                      Container(
+                        child: CarouselSlider.builder(
+                          carouselController: swiper,
+                          itemCount: trucks.length,
+                          options: CarouselOptions(
+                            autoPlay: false,
+                            viewportFraction: 0.618,
+                            height: 120,
+                            onPageChanged: (index, reason) {
+                              if (reason == CarouselPageChangedReason.manual) {
+                                setState(() {
+                                  currentIndex = index;
+                                });
+                              }
+                              listView.scrollTo(
+                                  index: index,
+                                  alignment: 0.5,
+                                  duration: Duration(seconds: 1),
+                                  curve: Curves.linearToEaseOut);
+                            },
+                          ),
+                          itemBuilder: (BuildContext context, int itemIndex,
+                              int pageViewIndex) {
+                            Truck truck = trucks[itemIndex];
+                            return Container(
+                              child: CachedNetworkImage(
+                                imageUrl: truck.src,
+                                height: double.infinity,
+                                fit: BoxFit.fitWidth,
+                              ),
+                            );
+                          },
                         ),
-                      );
-                    },
-                  ),
-                )
-              : Container()
+                      ),
+                      Container(
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 32, vertical: 12),
+                        // decoration: BoxDecoration(
+                        //     color: Colors.white54,
+                        //     borderRadius: BorderRadius.circular(12)),
+                        child: SingleChildScrollView(
+                          scrollDirection: Axis.horizontal,
+                          child: Row(
+                            children: [
+                              ...trucks[currentIndex]
+                                  .size
+                                  .asMap()
+                                  .entries
+                                  .map((e) => Container(
+                                        margin:
+                                            EdgeInsets.symmetric(horizontal: 4),
+                                        child: Column(
+                                          children: [
+                                            Text(
+                                              e.value.name,
+                                              style: TextStyle(
+                                                  fontSize: 14,
+                                                  color: Colors.black87),
+                                            ),
+                                            Text(
+                                              '${e.value.min}~${e.value.max}${e.value.unit}',
+                                              style: TextStyle(
+                                                  fontSize: 12,
+                                                  color: Colors.black54),
+                                            )
+                                          ],
+                                        ),
+                                      ))
+                            ],
+                          ),
+                        ),
+                      )
+                    ],
+                  ))
+              : Container(),
         ],
       ),
     );

@@ -7,11 +7,13 @@ part 'truck.g.dart';
 class Truck {
   String id;
   String name;
-  String src;
+  String src; // 纯货车照片
+  String srcWithSize; // 含有尺寸的货车照片
   List<String> scene; // 应用场景
   List<TruckSize> size; // 尺寸
   Truck(
-      {required this.id,
+      {required this.srcWithSize,
+      required this.id,
       required this.name,
       required this.src,
       required this.scene,

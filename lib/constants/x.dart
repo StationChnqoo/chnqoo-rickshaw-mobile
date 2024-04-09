@@ -198,4 +198,26 @@ class x {
     DateTime now = DateTime.now();
     return DateFormat('yyyy-MM-dd').format(now);
   }
+
+  static toast(String title, String message) {
+    Get.snackbar(
+      '',
+      '',
+      titleText: Text(
+        title,
+        style: TextStyle(
+            fontSize: 14, fontWeight: FontWeight.w500, color: Colors.white),
+      ), // Title
+      messageText: Text(
+        message,
+        style: TextStyle(fontSize: 14, color: Colors.white),
+      ), // Ti,// Message
+      snackPosition: SnackPosition.BOTTOM, // Position
+      backgroundColor: Colors.black87.withOpacity(0.8), // Background color
+      colorText: Colors.white, // Text color
+      borderRadius: 10.0, // Border radius
+      margin: EdgeInsets.all(10.0), // Margin around the toast
+      duration: Duration(seconds: 2), // Duration
+    );
+  }
 }

@@ -7,6 +7,7 @@ part of 'truck.dart';
 // **************************************************************************
 
 Truck _$TruckFromJson(Map<String, dynamic> json) => Truck(
+      srcWithSize: json['srcWithSize'] as String,
       id: json['id'] as String,
       name: json['name'] as String,
       src: json['src'] as String,
@@ -20,6 +21,7 @@ Map<String, dynamic> _$TruckToJson(Truck instance) => <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
       'src': instance.src,
+      'srcWithSize': instance.srcWithSize,
       'scene': instance.scene,
       'size': instance.size,
     };

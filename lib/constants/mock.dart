@@ -31,6 +31,8 @@ class Mock {
         "id": "",
         "name": "跑腿",
         "src":
+            "https://oimg.huolala.cn/ops/resource/20230329174747-00d1-67636679.png",
+        "srcWithSize":
             "https://luna-cdn-public.huolala.cn/luna-public/bfe-uadmin-api/bfeUadmin/20230710/1001cce1ff1083904526b5042b495fadfb9a.png",
         "size": [
           {"name": "载重", "unit": "公斤", "min": 0, "max": 20, "id": ""}
@@ -41,6 +43,8 @@ class Mock {
         "id": "",
         "name": "微面",
         "src":
+            "https://oimg.huolala.cn/ops/resource/20240201165721-00d1-51998230.png",
+        "srcWithSize":
             "https://luna-cdn-public.huolala.cn/luna-public/bfe-uadmin-api/bfeUadmin/20240202/1001ee00a94b7ba44928b55725a7cbd9dd59.png",
         "size": [
           {"name": "厢长", "unit": "米", "min": 1.4, "max": 1.7, "id": ""},
@@ -56,6 +60,8 @@ class Mock {
         "id": "",
         "name": "小面",
         "src":
+            "https://oimg.huolala.cn/ops/resource/20240201165750-00d1-81265230.png",
+        "srcWithSize":
             "https://luna-cdn-public.huolala.cn/luna-public/bfe-uadmin-api/bfeUadmin/20240202/10016a1748ccbb75457f82eb24445de1ecec.png",
         "size": [
           {"name": "厢长", "unit": "米", "min": 1.8, "max": 2.4, "id": ""},
@@ -71,6 +77,8 @@ class Mock {
         "id": "",
         "name": "中面",
         "src":
+            "https://oimg.huolala.cn/ops/resource/20240201165850-00d1-30559506.png",
+        "srcWithSize":
             "https://luna-cdn-public.huolala.cn/luna-public/bfe-uadmin-api/bfeUadmin/20240202/1001cfa4f82023e84aee81cd885a5c3ddcd7.png",
         "size": [
           {"name": "厢长", "unit": "米", "min": 2.4, "max": 3.2, "id": ""},
@@ -86,6 +94,8 @@ class Mock {
         "id": "",
         "name": "依维柯",
         "src":
+            "https://oimg.huolala.cn/ops/resource/20240201165928-00d1-89238663.png",
+        "srcWithSize":
             "https://luna-cdn-public.huolala.cn/luna-public/bfe-uadmin-api/bfeUadmin/20240202/1001e89a1b963779437180cb078f29e0a558.png",
         "size": [
           {"name": "厢长", "unit": "米", "min": 2.4, "max": 3.2, "id": ""},
@@ -101,6 +111,8 @@ class Mock {
         "id": "",
         "name": "微货",
         "src":
+            "https://oimg.huolala.cn/ops/resource/20240201170713-00d1-25548.png",
+        "srcWithSize":
             "https://luna-cdn-public.huolala.cn/luna-public/bfe-uadmin-api/bfeUadmin/20240202/10018e6e964cfc1d40cfafc5b3056b7bb292.png",
         "size": [
           {"name": "厢长", "unit": "米", "min": 2, "max": 2.9, "id": ""},
@@ -116,6 +128,8 @@ class Mock {
         "id": "",
         "name": "小货",
         "src":
+            "https://oimg.huolala.cn/ops/resource/20240201171112-00d1-51572245.png",
+        "srcWithSize":
             "https://luna-cdn-public.huolala.cn/luna-public/bfe-uadmin-api/bfeUadmin/20240202/10013b2cd5876da34434b7f61b03bdae1d68.png",
         "size": [
           {"name": "厢长", "unit": "米", "min": 2, "max": 3.7, "id": ""},
@@ -131,6 +145,8 @@ class Mock {
         "id": "",
         "name": "中货",
         "src":
+            "https://oimg.huolala.cn/ops/resource/20240201171251-00d1-44300491.png",
+        "srcWithSize":
             "https://luna-cdn-public.huolala.cn/luna-public/bfe-uadmin-api/bfeUadmin/20240202/100113bd69a5eb6641c5b9d0495c2b3a3ae3.png",
         "size": [
           {"name": "厢长", "unit": "米", "min": 3.8, "max": 4.3, "id": ""},
@@ -146,6 +162,8 @@ class Mock {
         "id": "",
         "name": "5米2",
         "src":
+            "https://oimg.huolala.cn/ops/resource/20240201172101-00d1-77471775.png",
+        "srcWithSize":
             "https://luna-cdn-public.huolala.cn/luna-public/bfe-uadmin-api/bfeUadmin/20240202/1001efe61e46fb274ebcb3c81fffe9d1475e.png",
         "size": [
           {"name": "厢长", "unit": "米", "min": 5, "max": 6.2, "id": ""},
@@ -161,6 +179,8 @@ class Mock {
         "id": "",
         "name": "6米8",
         "src":
+            "https://oimg.huolala.cn/ops/resource/20240201173207-00d1-41848570.png",
+        "srcWithSize":
             "https://luna-cdn-public.huolala.cn/luna-public/bfe-uadmin-api/bfeUadmin/20240202/10011fd9a77e7a394784a8a6204a3772f32c.png",
         "size": [
           {"name": "厢长", "unit": "米", "min": 6.4, "max": 7.2, "id": ""},
@@ -176,6 +196,8 @@ class Mock {
         "id": "",
         "name": "7米6",
         "src":
+            "https://oimg.huolala.cn/ops/resource/20240201173207-00d1-41848570.png",
+        "srcWithSize":
             "https://luna-cdn-public.huolala.cn/luna-public/bfe-uadmin-api/bfeUadmin/20240202/1001c2cc908dc3714e13917b6f6ffeef9ae1.png",
         "size": [
           {"name": "厢长", "unit": "米", "min": 7.3, "max": 7.8, "id": ""},
@@ -191,6 +213,8 @@ class Mock {
         "id": "",
         "name": "9米6",
         "src":
+            "https://oimg.huolala.cn/ops/resource/20240201173545-00d1-29763897.png",
+        "srcWithSize":
             "https://luna-cdn-public.huolala.cn/luna-public/bfe-uadmin-api/bfeUadmin/20240202/10016ae36308751f4cbdb3f390d21b67f457.png",
         "size": [
           {"name": "厢长", "unit": "米", "min": 9, "max": 9.8, "id": ""},
@@ -206,6 +230,8 @@ class Mock {
         "id": "",
         "name": "13米",
         "src":
+            "https://oimg.huolala.cn/ops/resource/20240201173745-00d1-79447887.png",
+        "srcWithSize":
             "https://luna-cdn-public.huolala.cn/luna-public/bfe-uadmin-api/bfeUadmin/20240221/1001831408fa68ad44d79380dbede6da2696.png",
         "size": [
           {"name": "厢长", "unit": "米", "min": 11.7, "max": 13, "id": ""},
@@ -221,6 +247,8 @@ class Mock {
         "id": "",
         "name": "17米5",
         "src":
+            "https://oimg.huolala.cn/ops/resource/20240201173915-00d1-10896921.png",
+        "srcWithSize":
             "https://luna-cdn-public.huolala.cn/luna-public/bfe-uadmin-api/bfeUadmin/20240202/10012b62ec87d38e46ad858f116a9f5cd36f.png",
         "size": [
           {"name": "厢长", "unit": "米", "min": 16, "max": 17.5, "id": ""},

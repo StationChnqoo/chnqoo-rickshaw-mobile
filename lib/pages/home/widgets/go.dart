@@ -2,8 +2,12 @@ import 'dart:convert';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:rickshaw/constants/mock.dart';
 import 'package:rickshaw/constants/truck.dart';
+import 'package:rickshaw/constants/x.dart';
+import 'package:rickshaw/main.dart';
+import 'package:rickshaw/routes/routes.dart';
 
 class HomeGo extends StatefulWidget {
   @override
@@ -159,7 +163,9 @@ class HomeGoState extends State<HomeGo> {
                             size: 18,
                           ),
                           onPressed: () {
-                            initTrucks();
+                            print('onGoPress ...');
+                            // x.toast('呵呵', 'HelloWorld.');
+                            Get.toNamed(RoutesClass.CONFIRM_ORDER);
                           },
                           label: Text('立即用车')),
                     )
@@ -172,8 +178,10 @@ class HomeGoState extends State<HomeGo> {
   }
 
   initTrucks() {
-    List<Truck> trucks =
-        Mock().initTrucks().map((truckJson) => Truck.fromJson(truckJson)).toList();
+    List<Truck> trucks = Mock()
+        .initTrucks()
+        .map((truckJson) => Truck.fromJson(truckJson))
+        .toList();
     print('Parsed trucks: ');
     print(trucks.map((e) => e.name));
   }
