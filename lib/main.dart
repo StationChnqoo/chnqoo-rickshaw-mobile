@@ -44,6 +44,7 @@ class ChnqooSoulMobileState extends State<ChnqooSoulMobile> {
     return GetMaterialApp(
       title: '',
       theme: ThemeData(
+        fontFamily: 'HarmonyOS',
         colorScheme:
             ColorScheme.fromSeed(seedColor: CupertinoColors.systemBrown),
         useMaterial3: true,
